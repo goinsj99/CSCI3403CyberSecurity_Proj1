@@ -1,0 +1,34 @@
+1.)
+jovyan@jupyter-kexu0741:~/3403_proj1$ time ./fastcoll -
+Generating first block: ...
+Generating second block: S00.........
+use 'md5sum md5_data*' check MD5
+
+real    0m1.992s
+user    0m1.957s
+sys     0m0.016s
+
+2.)
+jovyan@jupyter-kexu0741:~/3403_proj1$ xxd -p md5_data1
+0fdb6efaddf336de52cfba6533ff41852e7e724f67c6ab49201280a5d737
+c30116dbfcd8eeac398f0b1a53c1f4555c2f5b32ee4753b8d4fe5a4aa1e0
+3ee59958149a0038a8d4d1a501228fe15f5bfb742ced811b26bb201dd5f7
+14c5d06159b2ff2897be61597ee3c3ad9caf57f276a6c8fde0533c2bb95d
+b7d40f6e03a1b5ff
+
+jovyan@jupyter-kexu0741:~/3403_proj1$ xxd -p md5_data2
+0fdb6efaddf336de52cfba6533ff41852e7e72cf67c6ab49201280a5d737
+c30116dbfcd8eeac398f0b1a53c1f4d55c2f5b32ee4753b8d4fe5a4aa160
+3ee59958149a0038a8d4d1a501228fe15f5bfb742ced819b26bb201dd5f7
+14c5d06159b2ff2897be61597ee3c3ad9caf577276a6c8fde0533c2bb95d
+b7d40fee03a1b5ff
+
+3.) 
+jovyan@jupyter-kexu0741:~/3403_proj1$ md5sum md5_data1 md5_data2
+b1f154ec7ab55830f8ad84697254ce15  md5_data1
+b1f154ec7ab55830f8ad84697254ce15  md5_data2
+
+4.) 
+jovyan@jupyter-kexu0741:~/3403_proj1$ sha256sum md5_data1 md5_data2
+a864bd59428a54686193dc8987699199ea87f0100e7036e79090103f652125d9  md5_data1
+2fe3da5963860de79a4a08bdb4158dde5e2899946065f26bacb235a35d6c14d9  md5_data2
